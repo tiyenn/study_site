@@ -1,3 +1,6 @@
+<!-- Main -->
+ <main>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,74 +14,65 @@
   </head>
   <body>
     
+
     <!-- Header Section -->
-    <header>
-      <h1>Time to study!</h1>
-      <h2> Let's study for 1 hour together, are you ready?</h2>
+  <header>
+    <h1>Time to study!</h1>
+    <h2>Let's study for 1 hour together, are you ready?</h2>
+  <!--I added a prompt for users that have trouble studying for more than 1 hour. I think 1 hour is a good goal for study for people who have trouble studying-->
     </header>
 
 
-    <!-- Main Content Section -->
-    <main class="container">
-      
-      <!-- Media Player Section -->
-      <div class="media-player">
-        <video id="custom-video-player" controls>
-          <source
-            src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
-            type="video/mp4"
-          />
-        </video>
-      
-   <nav class="study-progress">
-  <h2>Your study progress</h2>
+    <!-- Control/Main Content Section -->
+  <section class="study-progress">
+  <h3>Your Study Progress:</h3>
+  <div class="timer-display" id="timer"> 60:00 </div>
+  <!--I Included a timer because my chosen context is "study." This wil allow the user to make it easier for them to log their study progress (which only goes for an hour)-->
+ <div class="progress-bar" onclick = "updateProgressBar()">
+  <span id="progress-bar-fill"></span></div>
 
-  <div class="timer-display" id="timer">60:00</div>
 
-  <!-- VIDEO PROGRESS BAR INSIDE NAV -->
+  <!-- Buttons-->
+ <div class="custom-controls">
+  <button id="play-pause-btn" onclick="togglePlayPause()">
+    <img id="play-pause-img"
+    src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
+    alt="Play Button"
+    width="24"
+    height="24"/>
+ </button>
 
-  <div class="video-progress">
-    <div class="progress-bar">
-      <span id="progress-bar-fill"></span>
-    </div>
-  </div>
+  <button id="mute-unmute-button">
+    <img id="mute-unmute-img"
+    src="https://img.icons8.com/ios-glyphs/30/high-volume--v1.png"
+    alt="Mute Button"
+    width="24"
+    height="24"/>
+  </button>
 
-      <div class="custom-controls">
-          <button id="play-pause-btn" onclick="togglePlayPause()">
-            <img
-              id="play-pause-img"
-              src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
-              alt="Play Button"
-              width="24"
-              height="24"
-            />
-          </button>
+  <button id="restart-button" onclick="toggleRestart()">
+  <img id="restart-img"
+  src="https://img.icons8.com/ios-glyphs/30/restart.png"
+  alt="Restart Button"
+  width="24"
+  height="24"/>
+</button>
+</div>
+<!--Although regularly, for audio players you'd usually have a speed up, playback buttons, etc. I decided to maintain a clean UI layout and minimise the button options. I felt that if I were to add extra buttons
+for the site, it would just be overwhelming. Additionally, I don't see the point in those buttons for a study site as things such as "speeding up" the audio is useless in times of studying and focusing.
+I added the most crucial buttons to make it easier to use, mute and unmute (for those who'd prefer to log their studying without music, a rewind (to restart their progress) and obviously, a play and pause button
+so the user can start and pause their study progress.-->
+</section>
 
-        <div class="custom-controls">
-          <button id="fast-forward-btn" onclick ="fastForward()">
-            <img
-            id="fast-forward-btn"
-            src="buttons/icons8-fast-forward-30.png"
-            alt="Fast forward button"
-            />
-          </button>
-        </div> 
+    <!-- Audio -->
+    <section class="music-player">
+      <audio id="audio">
+        <source src="relax.mp3" type="audio/mpeg">
+      </audio>
 </main>
+</section>
 
-  <div class="timer-controls">
-    <button onclick="startTimer()">Start</button>
-    <button onclick="pauseTimer()">Pause</button>
-    <button onclick="resetTimer()">Reset</button>
-  </div>
-</nav>
-
-    <!-- Footer Section -->
-    <footer>
-      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
-      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
-      <a href="https://icons8.com">Icons8</a>
-      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
-      <a href="https://icons8.com">Icons8</a>
-    </footer>
+<!-- Footer -->
+     <footer>Icons by <a href="https://icons8.com/">Icons8</a></footer>
   </body>
 </html>
