@@ -1,14 +1,13 @@
-
 :root {
-  --primary-bg-color: #f5f5f4;
+  --primary-bg-color: #a3b5a9;
   --text-color: #2f3542;
   --main-bg-color: #dfe4ea;
   --main-text-color: #2f3542;
   --main-btn-bg-color: #ffffff;
   --border-color: #dcdde1;
 }
-/* For my study/music website, I decided to make the colours a saturated blue and purple as I find them aesthetic but also calming in a sense. They aren't too vibrant and is easy on the eyes. */
-/* I then changed my mind and decided to go for a simpler aesthetic using white/monotone colours because I think it will help with the calming sensation */
+
+/* For my colour choices, I went for a green saturated colour palette*/
 
 body,
 h1,
@@ -21,7 +20,7 @@ ul {
 
 body {
 
-  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--primary-bg-color);
   color: var(--text-color);
   line-height: 1.6;
@@ -30,75 +29,40 @@ body {
   align-items: center;
 }
 
-/* Create a container for the main content */
-.container {
-  .container {
-  max-width: 1000px;
-  width: 90%;
-
-  margin: 40px auto;
-  padding: 25px;
-
-  background: white;
-  border-radius: var(--radius);
-
-  box-shadow: var(--shadow);
-}
-}
-
 /* Header styling */
 header {
-  margin: 5px;
+    text-align: center;
+    margin: 20px;
 }
 
 header h1 {
-  font-size: 2rem;
-  font-weight: 900;
+  font-size: 2.5rem;
+  font-weight:bold;
   margin: 5px;
-  text-align: center;
 }
 
 header h2 {
- text-align: center;;
+ margin: 5px;
+ font-size: 1.5rem;
 }
 
 .study-progress {
-  margin: 5px;
-  background: white;
-  padding: 20px;
+  font-size: 2rem;
+  margin: 10px;
+  background: #89999a;
+  padding: 30px;
   text-align: center;
+  border-radius: 25px;
+  outline: 3px;
+  outline-style:solid;
+  outline-color: #7f9385;
 }
 
 .timer-display {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 4rem;
+  font-weight:normal;
   margin: 5px 0;
   color: var(--text-color);
-}
-
-.timer-controls {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-.timer-controls button {
-  background: white;
-
-  border: 1px solid var(--border-color);
-
-  padding: 10px 18px;
-
-  border-radius: 10px;
-
-  cursor: pointer;
-
-  transition: all 0.2s ease;
-}
-
-.timer-controls button:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
 }
 
 /* Navigation styling */
@@ -125,78 +89,46 @@ nav a {
   color: var(--text-color);
 }
 
-/* Media player styling */
-.media-player {
-  width: 100%;
-  margin-top: 20px;
-}
-
-.media-player video {
-  width: 80%;
-  border-radius: var(--radius);
-  margin: 20px auto;
-}
-
 .custom-controls button {
-  background-color: white;
+  background-color: #ece4d7;
   color: var(--main-text-color);
-
   border: 1px solid var(--border-color);
-
-  padding: 10px 16px;
-
-  border-radius: 10px;
-
+  padding: 23px 45px;
+  border-radius: 60px;
+  margin: 25px;
   cursor: pointer;
-
-  font-size: 15px;
-
   transition: all 0.2s ease;
+  outline: 3px;
+  outline-style:solid;
+  outline-color: #6e8486;
+  transition:(var(--main-text-color)) 0.3s ease;
 }
 
 .custom-controls button:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
+  transform: scale(1.1);
 }
 
 .progress-bar {
-  width: 100%;
-  height: 12px;
-
-  background-color: #dcdde1;
-
+  align-items: center;
+  margin: 40px;
+  width: 750px;
+  height: 20px;
+  background-color: #ece4d7;
   border-radius: 999px;
-
   overflow: hidden;
-
-  margin-top: 15px;
+  outline: 3px;
+  outline-style: solid;
+  outline-color: #6e8486;
 }
 
 .progress-bar span {
   display: block;
   height: 100%;
-
-  background-color: #7f8fa6;
-
+  background-color: #ddc8b7;
   width: 0;
-
   transition: width 0.3s ease;
 }
 
-section {
-  margin-bottom: 40px;
-}
-
-* {
-  transition: background-color 0.2s ease,
-              color 0.2s ease;
-}
-
-/* Footer styling */
 footer {
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-  text-align: center;
-  padding: 10px 0;
-  width: 100%;
+  margin: 25px;
 }
